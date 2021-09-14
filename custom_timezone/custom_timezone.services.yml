@@ -1,0 +1,4 @@
+services:
+ custom_timezone.data:
+   class: \Drupal\custom_timezone\Controller\TimezoneController
+   arguments: ['@config.factory','@logger.factory']

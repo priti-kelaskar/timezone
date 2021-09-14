@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_timezone.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function custom_timezone_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_timezone module.
+    case 'help.page.custom_timezone':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Display Timezone based on the location.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function custom_timezone_theme() {
+  return [
+   'current_location_time' => [
+      'template' => 'block--current-location-time',
+      'variables' => [
+        'data' => NULL
+      ],
+    ],
+  ];
+}

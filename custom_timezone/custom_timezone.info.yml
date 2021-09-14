@@ -1,0 +1,5 @@
+name: 'Custom Timezone'
+type: module
+description: 'Display Timezone based on the location.'
+core: 8.x
+package: 'Custom'
